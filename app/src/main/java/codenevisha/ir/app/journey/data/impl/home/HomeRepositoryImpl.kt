@@ -6,9 +6,9 @@ import codenevisha.ir.app.journey.util.AppConstant
 
 class HomeRepositoryImpl
 private constructor(
-        private val homeRemoteRepository: HomeRepository.HomeInterface,
-        private val homeLocalRepository: HomeRepository.HomeInterface)
-    : HomeRepository.HomeInterface {
+        private val homeRemoteRepository: HomeRepository,
+        private val homeLocalRepository: HomeRepository)
+    : HomeRepository {
 
     override fun getArticlesNormal(callback: HomeRepository.LoadDataCallback, force: Boolean) {
         getArticlesRx(callback, force)
@@ -63,8 +63,8 @@ private constructor(
          * @return the [HomeRepositoryImpl] instance
          */
         fun getInstance(
-                homeRemoteRepository: HomeRepository.HomeInterface,
-                homeLocalRepository: HomeRepository.HomeInterface
+                homeRemoteRepository: HomeRepository,
+                homeLocalRepository: HomeRepository
         ): HomeRepositoryImpl {
 
             if (INSTANCE == null)

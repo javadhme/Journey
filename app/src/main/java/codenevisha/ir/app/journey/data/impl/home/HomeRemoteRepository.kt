@@ -1,20 +1,20 @@
 package codenevisha.ir.app.journey.data.impl.home
 
 import android.util.Log
-import codenevisha.ir.app.journey.data.remote.ServiceGenerator
-import codenevisha.ir.app.journey.data.repository.HomeRepository
 import codenevisha.ir.app.journey.data.model.ArticleModel
 import codenevisha.ir.app.journey.data.remote.APIs
+import codenevisha.ir.app.journey.data.remote.DisposeObservable
+import codenevisha.ir.app.journey.data.remote.ServiceGenerator
+import codenevisha.ir.app.journey.data.repository.HomeRepository
 import codenevisha.ir.app.journey.util.AppConstant
 import com.yaramobile.wicalory.data.network.ApiError
-import codenevisha.ir.app.journey.data.remote.DisposeObservable
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
-class HomeRemoteRepository : HomeRepository.HomeInterface {
+class HomeRemoteRepository : HomeRepository{
 
     private val apiService: APIs = ServiceGenerator.createService(APIs::class.java)
 

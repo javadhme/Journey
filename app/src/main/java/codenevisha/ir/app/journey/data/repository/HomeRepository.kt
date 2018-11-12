@@ -5,12 +5,8 @@ import codenevisha.ir.app.journey.util.AppConstant
 
 interface HomeRepository {
 
-    interface HomeInterface {
-        fun getArticlesNormal(callback: LoadDataCallback, force: Boolean)
-        fun getArticlesRx(callback: LoadDataCallback, force: Boolean)
-
-    }
-
+    fun getArticlesNormal(callback: LoadDataCallback, force: Boolean)
+    fun getArticlesRx(callback: LoadDataCallback, force: Boolean)
 
     /**
      * I create a default callback for bunch of requests
